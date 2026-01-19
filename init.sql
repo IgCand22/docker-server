@@ -1,0 +1,8 @@
+USE db-massagem;
+
+CREATE TABLE IF NOT EXISTS massagens (
+    id INT PRIMARY KEY,
+    cliente VARCHAR(100) NOT NULL,
+    data_massagem TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    tempo INT DEFAULT 60
+);
