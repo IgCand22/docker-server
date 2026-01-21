@@ -1,18 +1,11 @@
 services:
 
-  server:
-    build: .
-    container_name: node_server
-    ports:
-      - "${APP_PORT}:${APP_PORT}"
-    env_file:
-      - .env
-    depends_on:
-      mysql:
-        condition: service_healthy
+  
 
   mysql:
     image: mysql:8.0
+    ports:
+      - ${DB_PORT}:3306
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
       MYSQL_DATABASE: ${MYSQL_DATABASE}

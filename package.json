@@ -4,12 +4,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js 0.0.0.0"
+    "start": "nodemon server.js localhost 3000"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "Sistema em express e DB MySQL genérico, utilizando Docker",
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.2.1",

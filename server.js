@@ -1,3 +1,5 @@
+require('dotenv').config();
+const massagensRoutes = require('./routes/massagens.route');
 const express = require('express')
 const app = express();
 const PORT = process.env.APP_PORT;
@@ -16,15 +18,7 @@ app.get('/', (req, res) => {
     }
 })
 
-app.get('/massagens', async (req, res) => {
-    try{
-        const [rows] = await pool.query('SELECT * FROM massagens');
-        res.status(200).json(rows)
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ error: "Erro no banco" })
-    }
-})
+app.use('/massagens', massagensRoutes)
 
 app.listen(PORT, () => {
     console.log(`Server rodando na porta ${PORT}`)
