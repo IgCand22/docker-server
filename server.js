@@ -4,8 +4,6 @@ const express = require('express')
 const app = express();
 const PORT = process.env.APP_PORT;
 
-const pool = require('./db/pool');
-
 
 app.use(express.json());
 
@@ -18,7 +16,7 @@ app.get('/', (req, res) => {
     }
 })
 
-app.use('/massagens', massagensRoutes)
+app.use('/massagens', massagensRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server rodando na porta ${PORT}`)

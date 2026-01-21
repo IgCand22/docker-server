@@ -1,4 +1,4 @@
-USE db-massagem;
+USE docker-db;
 
 CREATE TABLE IF NOT EXISTS massagens (
     id INT PRIMARY KEY,
