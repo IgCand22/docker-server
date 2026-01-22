@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
     try{
-        res.status(200).json({ message: "Servido está online" })
+        res.status(200).json({ message: "Servidor online" })
     } catch (err) {
         console.error("O erro foi: "+err);
         res.status(500).json({ message: "Erro"})
