@@ -17,7 +17,7 @@ const getMassagens = async (req, res) => {
             `SELECT 
                 m.id_massagem, 
                 c.nome AS nome_cliente, 
-                m.data_massagem, 
+                DATE_FORMAT(m.data_massagem, '%Y-%m-%d') AS data_massagem, 
                 m.tempo 
             FROM 
                 massagens m 
