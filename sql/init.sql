@@ -1,4 +1,4 @@
-USE docker-db;
+USE db-docker;
 
 CREATE TABLE IF NOT EXISTS clientes (
     id_cliente INT PRIMARY KEY AUTO_INCREMENT,
